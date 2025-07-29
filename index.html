@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional | Reyna Garrido</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8e7cc3;
+            --secondary: #d5a6bd;
+            --accent: #6d9eeb;
+            --dark: #1e1b4b;
+            --light: #f9f7fe;
+            --text: #333;
+            --transition: all 0.4s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #f5f7fa 0%, #f9f7fe 100%);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(142, 124, 195, 0.1) 0%, transparent 20%),
+                        radial-gradient(circle at 90% 80%, rgba(213, 166, 189, 0.1) 0%, transparent 20%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(249, 247, 254, 0.85);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0 50px;
+            position: relative;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 50px;
+            z-index: 2;
+        }
+
+        .hero-text h4 {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .hero-text h1 span {
+            color: var(--accent);
+            position: relative;
+        }
+
+        .hero-text h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background: rgba(109, 158, 235, 0.2);
+            z-index: -1;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .matricula {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(142, 124, 195, 0.3);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(109, 158, 235, 0.3);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            z-index: -1;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(109, 158, 235, 0.4);
+        }
+
+        .btn:hover::before {
+            opacity: 1;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(142, 124, 195, 0.1);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-container {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .profile-container::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(20px);
+            opacity: 0.6;
+        }
+
+        .profile-img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .about-text p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(142, 124, 195, 0.1), rgba(213, 166, 189, 0.1));
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            margin: 20px 0;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-box {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .stat-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-box i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .stat-box h4 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            color: var(--accent);
+        }
+
+        .stat-box p {
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 100px 0;
+            position: relative;
+            background: linear-gradient(to bottom, white 0%, #f9f7fe 100%);
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transition: var(--transition);
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .skill-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .skill-card p {
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        /* Projects CTA */
+        .projects-cta {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .projects-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.05)" points="0,0 100,0 100,100"/></svg>');
+            background-size: 100% 100%;
+        }
+
+        .projects-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .projects-cta p {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--accent);
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .cta-btn i {
+            margin-left: 10px;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .contact-card p {
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            background: var(--accent);
+        }
+
+        /* Future Section */
+        .future {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            text-align: center;
+        }
+
+        .future h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .future-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .future-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .copyright {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Holographic Effect */
+        .holographic-card {
+            perspective: 1000px;
+        }
+
+        .holographic-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .holographic-card:hover .holographic-inner {
+            transform: rotateY(180deg);
+        }
+
+        .holographic-front, .holographic-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .holographic-front {
+            background: linear-gradient(135deg, rgba(142, 124, 195, 0.1), rgba(213, 166, 189, 0.1));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .holographic-back {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(109, 158, 235, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(109, 158, 235, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(109, 158, 235, 0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-top: 50px;
+            }
+            
+            .hero-text p {
+                max-width: 100%;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .profile-container {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .profile-img {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo"><i class="fas fa-laptop-code"></i> Reyna Garrido</a>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h4>¡Hola, soy</h4>
+                    <h1><span>Reyna Garrido</span></h1>
+                    <div class="matricula">Matrícula: 16-MISN-2-030</div>
+                    <p>Estudiante de término de Ingeniería en Sistemas, con interés en seguridad de redes, análisis de bases de datos y diseño gráfico. Mi formación se complementa con habilidades en comunicación efectiva y trabajo en equipo.</p>
+                    <div>
+                        <a href="#sobre-mi" class="btn">Conóceme Mejor <i class="fas fa-arrow-down"></i></a>
+                        <a href="#proyectos" class="btn btn-secondary">Ver Proyectos</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <img src="reina.jpg" alt="Foto de Reyna Garrido" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre-mi">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Mí</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Ingeniera en Sistemas (casi graduada)</h3>
+                    <p>Soy estudiante de término de la carrera de Ingeniería en Sistemas, con un fuerte interés en seguridad de redes, análisis de bases de datos y diseño gráfico. Mi formación técnica se complementa con habilidades en el manejo de herramientas de oficina, navegación por internet, y comunicación efectiva gracias a cursos adicionales en oratoria y maquillaje básico, que fortalecen tanto mi perfil profesional como personal.</p>
+                    
+                    <div class="highlight">
+                        <p>Actualmente trabajo como Cabana Concierge en Dreams & Secrets La Romana, donde he desarrollado habilidades en atención al cliente, organización y trabajo en equipo dentro de un entorno exigente y multicultural.</p>
+                    </div>
+                    
+                    <p>Manejo conocimientos básicos de inglés y estoy en constante aprendizaje para ampliar mis competencias técnicas y profesionales. Me defino como una persona creativa, proactiva y con gran disposición para seguir creciendo en el ámbito tecnológico y del diseño.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Ingeniería</h4>
+                            <p>En Sistemas Computacionales</p>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-language"></i>
+                            <h4>Inglés</h4>
+                            <p>Técnico y en constante aprendizaje</p>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Ubicación</h4>
+                            <p>La Romana, República Dominicana</p>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-users"></i>
+                            <h4>Experiencia</h4>
+                            <p>Cabana Concierge</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="holographic-card" style="flex: 1; height: 400px;">
+                    <div class="holographic-inner">
+                        <div class="holographic-front">
+                            <i class="fas fa-lightbulb" style="font-size: 4rem; color: var(--accent); margin-bottom: 20px;"></i>
+                            <h3 style="color: var(--dark); margin-bottom: 15px;">Mi Filosofía</h3>
+                            <p style="color: var(--text);">"Combinar la tecnología con creatividad para desarrollar soluciones que impacten positivamente en las personas y organizaciones."</p>
+                        </div>
+                        <div class="holographic-back">
+                            <h3 style="margin-bottom: 20px;">Objetivo Profesional</h3>
+                            <p style="line-height: 1.8;">Integrarme a un entorno profesional que me permita aplicar mis conocimientos técnicos, potenciar mis habilidades creativas y desarrollar soluciones eficientes que contribuyan al crecimiento de las organizaciones.</p>
+                            <div style="margin-top: 30px;">
+                                <i class="fas fa-rocket" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="habilidades">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mis Habilidades</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Seguridad de Redes</h3>
+                    <p>Conocimientos en protección de redes y sistemas contra amenazas digitales.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Análisis de Bases de Datos</h3>
+                    <p>Habilidad para analizar y gestionar información estructurada en sistemas de bases de datos.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Diseño Gráfico</h3>
+                    <p>Creatividad aplicada al diseño de interfaces y elementos visuales.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Herramientas de Oficina</h3>
+                    <p>Dominio de paquetes de productividad y herramientas digitales.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Comunicación Efectiva</h3>
+                    <p>Habilidad para transmitir ideas con claridad y eficacia.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Trabajo en Equipo</h3>
+                    <p>Colaboración efectiva en entornos multiculturales y exigentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects CTA -->
+    <section class="projects-cta" id="proyectos">
+        <div class="container">
+            <h2>Explora Mis Proyectos</h2>
+            <p>Descubre mi portafolio completo de trabajos académicos y proyectos personales en desarrollo.</p>
+            <a href="https://docs.google.com/document/d/1TU_EXAMPLE_LINK" target="_blank" class="cta-btn">Ver Portafolio en Google Docs <i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Correo Electrónico</h3>
+                    <p>Reynagarrido9724@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Teléfono</h3>
+                    <p>809-507-2791</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Ubicación</h3>
+                    <p>La Romana, República Dominicana</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/Reyna_garrido97" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1GJxNVGEqA/?mibextid=wwXIfr" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Section -->
+    <section class="future" id="futuro">
+        <div class="container">
+            <h2>Mi Proyección a Futuro</h2>
+            <div class="future-content">
+                <p>Como futura Ingeniera en Sistemas, me proyecto como una profesional comprometida con el aprendizaje continuo y la innovación tecnológica. Me apasionan áreas clave como la seguridad de redes, el análisis de bases de datos y el diseño gráfico, campos en los que deseo seguir formándome y especializándome.</p>
+                <p>Mi objetivo es integrarme a un entorno profesional que me permita aplicar mis conocimientos técnicos, potenciar mis habilidades creativas y desarrollar soluciones eficientes que contribuyan al crecimiento de las organizaciones. Aspiro a ocupar roles que combinen la tecnología, la comunicación visual y la gestión de información, aportando tanto en lo técnico como en lo humano.</p>
+                <p>A futuro, me visualizo siendo parte de proyectos tecnológicos innovadores, adquiriendo certificaciones en áreas especializadas y participando en iniciativas que impacten positivamente en la sociedad. Mi enfoque está en crecer como profesional íntegra, con valores, visión estratégica y capacidad para adaptarme a los constantes cambios del mundo digital.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2023 Reyna Garrido. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll animation to elements
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .stat-box, .holographic-card, .contact-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(249, 247, 254, 0.95)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(249, 247, 254, 0.85)';
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Floating animation for profile image
+        const profileContainer = document.querySelector('.profile-container');
+        setInterval(() => {
+            profileContainer.style.animation = 'none';
+            setTimeout(() => {
+                profileContainer.style.animation = 'float 6s ease-in-out infinite';
+            }, 10);
+        }, 12000);
+    </script>
+</body>
+</html>
